@@ -4,6 +4,7 @@ import {
 import ErrorPage from "../Pages/Error/ErrorPage";
 import Root from "../Layouts/Root";
 import App from "../App";
+import Register from "../Pages/Register/Register";
 
 const router = createBrowserRouter([
     {
@@ -18,6 +19,10 @@ const router = createBrowserRouter([
             {
                 path: "/login",
                 element: <App />,
+            },
+            {
+                path: "/register",
+                element: <Register />,
             },
         ]
     },
