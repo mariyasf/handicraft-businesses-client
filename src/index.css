@@ -16,23 +16,20 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  --primary-color-1: #cd6f2e;
+  --primary-color-2: #fac056;
+  --base-color-1: #421b01;
+  --accent-color-1: #ddb07f;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-
-a:hover {
-  color: #535bf2;
+* {
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
   min-width: 320px;
+  max-width: 1440px;
   min-height: 100vh;
 }
 
