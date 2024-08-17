@@ -19,7 +19,7 @@ const Register = () => {
 
                 <div className="flex-1 card shrink-0 h-[600px]  border
                   border-[#c09d73]">
-                    <form className="p-5 space-y-4" >
+                    <form className="p-5 space-y-4 font-Poppins" >
                         <div className="flex flex-col lg:flex-row gap-5">
                             <div className="form-control">
                                 <label className="label">

@@ -6,10 +6,18 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        Rancho: '"Rancho", cursive;',
+        Poppins: '"Poppins", sans- serif',
+        Cormorrant: '"Cormorant Garamond", serif'
+      }
 
     },
   },
   plugins: [
     require('daisyui'),
   ],
+  daisyui: {
+    themes: ["light", "dark"],
+  },
 }
