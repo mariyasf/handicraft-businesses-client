@@ -55,6 +55,25 @@ const Register = () => {
                 .then()
                 .catch()
 
+
+            const createdAt = result.user?.metadata?.creationTime;
+            const user = { name, email, createAt: createdAt };
+            
+            fetch(`${import.meta.env.VITE_API_URL}/users`, {
+                method: 'POST',
+                headers: {
+                    'content-type': 'application/json'
+                },
+                body: JSON.stringify(user)
+            })
+                .then(res => res.json())
+                .then(data => {
+                    // console.log(data);
+                    if (data.insertedId) {
+                        console.log('Register user')
+                    }
+                })
+            
             e.target.reset();
 
         }
