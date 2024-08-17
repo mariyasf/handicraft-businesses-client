@@ -1,9 +1,70 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
-import { ToastContainer } from 'react-toastify';
+import { toast, ToastContainer } from 'react-toastify';
+import UseAuth from '../../Hooks/UseAuth';
+import { IoEye, IoEyeOff } from 'react-icons/io5';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Register = () => {
+    const { createNewUser, updateUserProfile } = UseAuth();
+
+    const [showPass, setShowPass] = useState(false);
+
+    const handleRegister = async (e) => {
+        e.preventDefault();
+
+        const form = new FormData(e.currentTarget);
+
+        const name = form.get('name');
+        const email = form.get('email');
+        const photo = form.get('imageUrl');
+        const phoneNumber = form.get('phoneNumber');
+        const password = form.get('password');
+        const termsAC = e.target.terms.checked;
+        console.log(name, photo, email, password);
+
+        // Reset error or success
+        toast.dismiss();
+
+        // Check Password Authentication
+        if (password.length < 6) {
+            return toast.error('Password should be at least 6 characters');
+        }
+        if (!/[A-Z]/.test(password)) {
+            return toast.error('Password should contain at least one uppercase letter');
+        }
+        if (!/[a-z]/.test(password)) {
+            return toast.error('Password should contain at least one lowercase letter');
+        }
+
+        // Terms And Condition
+        if (!termsAC) {
+            return toast.error('Please accept our terms and conditions');
+        }
+
+        // create new User
+
+        try {
+            const result = createNewUser(email, password)
+            // console.log(result);
+
+            toast.success('Registration successful! You can now log in.');
+
+            updateUserProfile(name, photo, phoneNumber)
+                .then()
+                .catch()
+
+            e.target.reset();
+
+        }
+        catch (error) {
+            console.error(error);
+            toast.error('Registration failed. Please try again later.');
+        }
+
+    }
+
     return (
         <div>
             <Helmet>
@@ -19,7 +80,7 @@ const Register = () => {
 
                 <div className="flex-1 card shrink-0 h-[600px]  border
                   border-[#c09d73]">
-                    <form className="p-5 space-y-4 font-Poppins" >
+                    <form className="p-5 space-y-4 font-Poppins" onSubmit={handleRegister}>
                         <div className="flex flex-col lg:flex-row gap-5">
                             <div className="form-control">
                                 <label className="label">
@@ -55,12 +116,16 @@ const Register = () => {
                             </label>
                             <div className='relative gap-2'>
                                 <input
+                                    type={showPass ? "text" : "password"}
                                     name="password"
                                     placeholder="password"
                                     className="input input-bordered w-full"
                                     required />
                                 {/* Toggle Show password */}
-
+                                <span
+                                    className="absolute top-1/3 text-black text-xl"
+                                    onClick={() => setShowPass(!showPass)}>
+                                    {showPass ? <IoEyeOff /> : <IoEye />}</span>
                             </div>
                         </div>
 
