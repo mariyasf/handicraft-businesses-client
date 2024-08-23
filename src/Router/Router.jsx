@@ -4,6 +4,8 @@ import {
 import ErrorPage from "../Pages/Error/ErrorPage";
 import Root from "../Layouts/Root";
 import App from "../App";
+import Register from "../Pages/Register/Register";
+import Login from "../Pages/Login/Login";
 
 const router = createBrowserRouter([
     {
@@ -17,7 +19,11 @@ const router = createBrowserRouter([
             },
             {
                 path: "/login",
-                element: <App />,
+                element: <Login />,
+            },
+            {
+                path: "/register",
+                element: <Register />,
             },
         ]
     },
