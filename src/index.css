@@ -8,9 +8,9 @@
 
 
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  /* font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
-  font-weight: 400;
+  font-weight: 400; */
 
   /* color-scheme: light dark; */
   /* color: rgba(255, 255, 255, 0.87); */
@@ -32,12 +32,21 @@
   padding: 0;
 }
 
-body {
-  min-width: 320px;
-  max-width: 1440px;
-  min-height: 100vh;
+.active {
+  color: #281101;
+  text-decoration: underline;
+  font-weight: 700;
 }
 
+
+/* body {
+  min-width: 320px;
+  max-width: 1240px;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 0 10px;
+} */
+/* 
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
@@ -51,4 +60,4 @@ body {
   button {
     background-color: #f9f9f9;
   }
-}
+} */
