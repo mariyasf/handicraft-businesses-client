@@ -13,7 +13,6 @@ const UseAxiosSecure = () => {
 
     axiosSecure.interceptors.response.use(
         res => {
-            // console.log('response app e ashr age ami thamiye dekhechi ki ache er bitor', res)
             return res;
         },
         async error => {

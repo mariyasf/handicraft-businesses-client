@@ -6,6 +6,7 @@ import Root from "../Layouts/Root";
 import App from "../App";
 import Register from "../Pages/Register/Register";
 import Login from "../Pages/Login/Login";
+import UserProfile from "../Pages/UserProfile/UserProfile";
 
 const router = createBrowserRouter([
     {
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
             {
                 path: "/register",
                 element: <Register />,
+            },
+            {
+                path: "/my-profile",
+                element: <UserProfile />,
             },
         ]
     },

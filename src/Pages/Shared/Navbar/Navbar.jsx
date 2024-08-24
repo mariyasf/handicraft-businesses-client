@@ -84,7 +84,7 @@ const Navbar = () => {
                                 className="dropdown-content z-[1] text-white
                                              menu p-2 shadow bg-[#ddb07f] rounded-xl w-52">
                                 <li className="hover:bg-[#cd6f2e] rounded-xl">
-                                    <NavLink to={'/profile'} className="w-full">
+                                    <NavLink to={'/my-profile'} className="w-full">
                                         Profile
                                     </NavLink>
                                 </li>

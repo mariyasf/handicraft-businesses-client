@@ -6,6 +6,7 @@ import axios from 'axios';
 export const AuthContext = createContext(null)
 const googleProvider = new GoogleAuthProvider();
 
+
 const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(null);
     const [loding, setLoding] = useState(true);
@@ -45,8 +46,8 @@ const AuthProvider = ({ children }) => {
             photoURL: image,
             phoneNumber: phoneNumber
         })
-
     }
+
     useEffect(() => {
         const unSubscribe = onAuthStateChanged(auth, currentUser => {
             // console.log('User in the auth state changed', currentUser);
