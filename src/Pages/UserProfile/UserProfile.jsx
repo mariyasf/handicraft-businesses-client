@@ -5,8 +5,50 @@ import { useEffect, useState } from 'react';
 import UseAuth from '../../Hooks/UseAuth';
 
 const UserProfile = () => {
+    const { user, updateUserProfile } = UseAuth();
+    const [updateUserInfo, setUpdateUserInfo] = useState(null);
+
+    useEffect(() => {
+        if (user) {
+            setUpdateUserInfo(user);
+        }
+    }, [user]);
 
 
+    function isValidURL(url) {
+        const urlPattern = /^(ftp|http|https):\/\/[^ "]+$/;
+        return urlPattern.test(url);
+    }
+
+    // console.log(phoneNumber);
+
+    const handleUpdate = (e) => {
+        e.preventDefault();
+
+        const form = new FormData(e.currentTarget);
+
+        const name = form.get('name');
+        const imageUrl = form.get('imageUrl');
+        const phoneNumber = form.get('phoneNumber');
+
+        // Reset error or success
+        toast.dismiss();
+
+        updateUserProfile(name, imageUrl, phoneNumber)
+            .then(() => {
+                toast.success("Profile updated")
+                setUpdateUserInfo({
+                    ...updateUserInfo,
+                    displayName: name,
+                    photoURL: imageUrl,
+                    phoneNumber: phoneNumber
+                })
+            })
+            .catch(error => {
+                console.log(error);
+            })
+
+    }
     return (
         <>
             <Helmet >
@@ -15,7 +57,7 @@ const UserProfile = () => {
 
             <div className="flex flex-col lg:flex-row gap-4
              min-w-[500px] max-w-[1240px] mx-auto
-             px-5 pt-[100px] pb-10 ">
+             px-5 pt-24 pb-10 ">
                 <div className="flex flex-col w-full lg:w-[400px] shadow-lg rounded-xl">
                     <div className='text-center'>
                         <img alt="Profile"
@@ -35,7 +77,9 @@ const UserProfile = () => {
                 </div>
                 <div className='flex-1  shadow-lg rounded-xl'>
 
-                    <form className="card-body font-Cormorrant"
+                    <form
+                        onSubmit={handleUpdate}
+                        className="card-body font-Cormorrant"
                     >
                         <h2 className='text-xl font-bold'>Account Settings</h2>
                         <div className='flex flex-col lg:flex-row gap-5 justify-between'>

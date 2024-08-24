@@ -2,8 +2,18 @@ import { Link, NavLink } from "react-router-dom";
 import logo from '/logo.png';
 import profile from '/Images/profile.jpg'
 import "../../../index.css"
+import UseAuth from "../../../Hooks/UseAuth";
+import { IoPersonCircleSharp } from "react-icons/io5";
 
 const Navbar = () => {
+    const { user, logOut } = UseAuth();
+    // console.log(user);
+
+    const handleSignOut = () => {
+        logOut()
+            .then()
+            .catch()
+    }
 
 
     const navLinks = <>
@@ -64,40 +74,54 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <>
-                        <div className="dropdown dropdown-end">
-                            {/* Profile image */}
-                            <div
-                                tabIndex={0}
-                                role="button"
-                                className="btn btn-ghost btn-circle avatar"
-                            >
 
-                                <div className="w-10 rounded-full">
-                                    <img alt="Profile"
-                                        src={profile} />
+                    {
+                        user ?
+                            <>
+                                <div className="dropdown dropdown-end">
+                                    {/* Profile image */}
+                                    <div
+                                        tabIndex={0}
+                                        role="button"
+                                        className="btn btn-ghost btn-circle avatar"
+                                    >
+
+                                        <div className="w-10 rounded-full">
+
+                                            {
+                                                user ?
+                                                    <IoPersonCircleSharp className="h-10 w-10" />
+                                                    : <img src={user.photoURL} alt="" />
+                                            }
+                                        </div>
+
+                                    </div>
+
+                                    <ul tabIndex={0}
+                                        className="dropdown-content z-[1] text-white
+                                             menu shadow bg-[#ddb07f] rounded-xl w-52">
+                                        <li >
+                                            <NavLink to={'/profile'}>
+                                                {user?.displayName || 'Profile'}
+                                            </NavLink>
+                                        </li>
+
+                                        <li >
+                                            <a onClick={handleSignOut}>Logout</a>
+                                        </li>
+                                    </ul>
+
                                 </div>
 
-                            </div>
 
-                            <ul tabIndex={0}
-                                className="dropdown-content z-[1] text-white
-                                             menu p-2 shadow bg-[#ddb07f] rounded-xl w-52">
-                                <li className="hover:bg-[#cd6f2e] rounded-xl">
-                                    <NavLink to={'/my-profile'} className="w-full">
-                                        Profile
-                                    </NavLink>
-                                </li>
-
-                                <li className="hover:bg-[#cd6f2e] rounded-xl">
-                                    <a >Logout</a>
-                                </li>
-                            </ul>
-
-                        </div>
-
-
-                    </>
+                            </>
+                            :
+                            <div >
+                                <Link to={'/login'} className="mr-4">
+                                    <button className="btn bg-[#c09d73] hover:bg-[#86653d] text-white">Login</button>
+                                </Link>
+                            </div >
+                    }
                 </div>
             </div>
         </div>

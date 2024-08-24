@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify';
 import UseAuth from '../../Hooks/UseAuth';
 import { IoEye, IoEyeOff } from 'react-icons/io5';
@@ -10,19 +10,25 @@ const Register = () => {
     const { createNewUser, updateUserProfile } = UseAuth();
 
     const [showPass, setShowPass] = useState(false);
+    const location = useLocation();
+    const navigate = useNavigate();
 
     const handleRegister = async (e) => {
         e.preventDefault();
 
         const form = new FormData(e.currentTarget);
 
-        const name = form.get('name');
+        const fname = form.get('fname');
+        const lname = form.get('lname');
         const email = form.get('email');
-        const photo = form.get('imageUrl');
+        const photo = ""
         const phoneNumber = form.get('phoneNumber');
         const password = form.get('password');
         const termsAC = e.target.terms.checked;
-        console.log(name, photo, email, password);
+        // console.log(name, photo, email, password);
+
+        const fullName = `${fname} ${lname}`;
+        console.log(fullName, phoneNumber, photo, email);
 
         // Reset error or success
         toast.dismiss();
@@ -47,18 +53,17 @@ const Register = () => {
 
         try {
             const result = createNewUser(email, password)
-            // console.log(result);
+            console.log('User: ', result);
 
             toast.success('Registration successful! You can now log in.');
 
-            updateUserProfile(name, photo, phoneNumber)
+            updateUserProfile(fullName, photo, phoneNumber)
                 .then()
                 .catch()
 
-
             const createdAt = result.user?.metadata?.creationTime;
-            const user = { name, email, createAt: createdAt };
-            
+            const user = { fullName, email, phoneNumber, createAt: createdAt };
+
             fetch(`${import.meta.env.VITE_API_URL}/users`, {
                 method: 'POST',
                 headers: {
@@ -73,9 +78,9 @@ const Register = () => {
                         console.log('Register user')
                     }
                 })
-            
-            e.target.reset();
 
+            e.target.reset();
+            navigate(location?.state ? location.state : '/profile')
         }
         catch (error) {
             console.error(error);
@@ -91,37 +96,49 @@ const Register = () => {
             </Helmet>
             <ToastContainer />
 
-            <div className="hero-content flex-col lg:flex-row max-h-[600px] ">
-                <div className='flex-1 h-[600px]'>
-                    <img className='w-full h-full' src="/Images/lr.jpg" alt="Register Banner" />
+            <div className="flex flex-col md:flex-row h-screen ">
+                <div className='flex-1 hidden md:block'>
+                    <div className="h-full bg-cover bg-center bg-no-repeat bg-[url('./Images/lr.png')] 
+                    text-center text-white space-y-4 font-Cormorrant
+                    flex flex-col items-center justify-center
+                    px-4">
+                        <h2 className="text-6xl text-[#c09d73] lg:text-7xl md:text-5xl sm:text-4xl">Hey, There</h2>
+                        <p className="text-2xl lg:text-3xl md:text-xl sm:text-lg">Welcome Back! Please Enter your details</p>
+                    </div>
                 </div>
 
 
-                <div className="flex-1 card shrink-0 h-[600px]  border
-                  border-[#c09d73]">
-                    <form className="p-5 space-y-4 font-Poppins" onSubmit={handleRegister}>
+                <div className="font-Poppins
+                 flex-1  shrink-0 max-w-[600px] ">
+                    <h2 className='mx-10 border-b-4 border-[#c09d73] w-1/3 pb-4 md:pt-10 
+                    text-xl md:text-2xl lg:text-3xl font-bold font-Cormorrant'>Register Now</h2>
+
+                    <form className="px-10 pt-4 space-y-4 font-Poppins"
+                        onSubmit={handleRegister}>
                         <div className="flex flex-col lg:flex-row gap-5">
-                            <div className="form-control">
+                            <div className="form-control w-full">
                                 <label className="label">
-                                    <span className="label-text">Your Name</span>
+                                    <span className="label-text">First Name</span>
                                 </label>
-                                <input type="text" name="name" placeholder="Your Name" className="input input-bordered" required />
+                                <input type="text" name="fname" placeholder="Your First Name" className="input input-bordered" required />
                             </div>
-                            <div className="form-control">
+                            <div className="form-control w-full">
                                 <label className="label">
-                                    <span className="label-text">Photo URL</span>
+                                    <span className="label-text">Last Name</span>
                                 </label>
-                                <input type="text" name="imageUrl" placeholder="Photo URL" className="input input-bordered" required />
+                                <input type="text" name="lname" placeholder="Your Last Name" className="input input-bordered" required />
                             </div>
+
                         </div>
+
                         <div className="flex flex-col lg:flex-row gap-5">
-                            <div className="form-control">
+                            <div className="form-control w-full">
                                 <label className="label">
                                     <span className="label-text">Phone Number</span>
                                 </label>
                                 <input type="number" name="phoneNumber" placeholder="Phone Number" className="input input-bordered" required />
                             </div>
-                            <div className="form-control">
+                            <div className="form-control w-full">
                                 <label className="label">
                                     <span className="label-text">Email</span>
                                 </label>
@@ -132,17 +149,19 @@ const Register = () => {
                         <div className="form-control flex">
                             <label className="label">
                                 <span className="label-text">Password</span>
+
                             </label>
-                            <div className='relative gap-2'>
+                            <div className='gap-2 input input-bordered w-full
+                            flex flex-row items-center justify-between '>
                                 <input
                                     type={showPass ? "text" : "password"}
                                     name="password"
                                     placeholder="password"
-                                    className="input input-bordered w-full"
+                                    className=""
                                     required />
                                 {/* Toggle Show password */}
                                 <span
-                                    className="absolute top-1/3 text-black text-xl"
+                                    className=" text-black text-xl"
                                     onClick={() => setShowPass(!showPass)}>
                                     {showPass ? <IoEyeOff /> : <IoEye />}</span>
                             </div>
@@ -158,7 +177,7 @@ const Register = () => {
                         </div>
                     </form>
 
-                    <p className="text-center pb-4">
+                    <p className="text-center pt-4">
                         Already have an account? Please  <Link to={'/login'} className=" text-[#c09d73] hover:text-[#ddb07f] font-bold">Login</Link>
                     </p>
                 </div>
