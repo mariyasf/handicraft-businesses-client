@@ -6,6 +6,8 @@ import Root from "../Layouts/Root";
 import App from "../App";
 import Register from "../Pages/Register/Register";
 import Login from "../Pages/Login/Login";
+import UserProfile from "../Pages/UserProfile/UserProfile";
+import PrivateRoute from "./PrivateRoute";
 
 const router = createBrowserRouter([
     {
@@ -18,14 +20,20 @@ const router = createBrowserRouter([
                 element: <App />,
             },
             {
-                path: "/login",
-                element: <Login />,
-            },
-            {
-                path: "/register",
-                element: <Register />,
+                path: "/profile",
+                element:
+                    <PrivateRoute><UserProfile /></PrivateRoute>
+                ,
             },
         ]
+    },
+    {
+        path: "/login",
+        element: <Login />,
+    },
+    {
+        path: "/register",
+        element: <Register />,
     },
 ]);
 
