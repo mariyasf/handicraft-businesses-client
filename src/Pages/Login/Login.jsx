@@ -25,8 +25,6 @@ const Login = () => {
                 {
                     email: result?.user?.email
                 },
-
-
             )
             // console.log(data)
 

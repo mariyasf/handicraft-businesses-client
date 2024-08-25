@@ -6,8 +6,9 @@ import UseAuth from '../../Hooks/UseAuth';
 
 const UserProfile = () => {
     const { user, updateUserProfile } = UseAuth();
-    const [updateUserInfo, setUpdateUserInfo] = useState(null);
+    const [updateUserInfo, setUpdateUserInfo] = useState(user);
 
+    // console.log(user);
     useEffect(() => {
         if (user) {
             setUpdateUserInfo(user);
@@ -27,19 +28,24 @@ const UserProfile = () => {
 
         const form = new FormData(e.currentTarget);
 
-        const name = form.get('name');
+        const fname = form.get('fname');
+        const lname = form.get('lname');
         const imageUrl = form.get('imageUrl');
         const phoneNumber = form.get('phoneNumber');
+
+        const fullName = `${fname} ${lname}`;
+
+        console.log(fullName);
 
         // Reset error or success
         toast.dismiss();
 
-        updateUserProfile(name, imageUrl, phoneNumber)
+        updateUserProfile(fullName, imageUrl, phoneNumber)
             .then(() => {
                 toast.success("Profile updated")
                 setUpdateUserInfo({
                     ...updateUserInfo,
-                    displayName: name,
+                    displayName: fullName,
                     photoURL: imageUrl,
                     phoneNumber: phoneNumber
                 })
@@ -49,6 +55,8 @@ const UserProfile = () => {
             })
 
     }
+
+    console.log(updateUserInfo, user);
     return (
         <>
             <Helmet >
@@ -64,8 +72,8 @@ const UserProfile = () => {
                             className="rounded-full w-32 h-32 mx-auto"
                             src={profile} />
 
-                        <p className='text-xl font-Cormorrant font-bold'>Name: </p>
-                        <p className='text-gray-500 font-Cormorrant'>Email: </p>
+                        <p className='text-xl font-Cormorrant font-bold'> {updateUserInfo.displayName}</p>
+                        <p className='text-gray-500 font-Cormorrant'> {updateUserInfo.email}</p>
                     </div>
 
                     <div className='font-mono pt-5'>
@@ -112,8 +120,8 @@ const UserProfile = () => {
                                 <label className="label">
                                     <span className=" label-text font-bold text-lg">Phone Number</span>
                                 </label>
-                                <input type="number" name="phoneNumber"
-                                    placeholder="Phone Number" className="input input-bordered" />
+                                <input type="text" name="phoneNumber"
+                                    placeholder="Phone Number" className="input input-bordered font-mono" />
                             </div>
                         </div>
 

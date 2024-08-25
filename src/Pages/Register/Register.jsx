@@ -28,7 +28,7 @@ const Register = () => {
         // console.log(name, photo, email, password);
 
         const fullName = `${fname} ${lname}`;
-        console.log(fullName, phoneNumber, photo, email);
+        // console.log(fullName, phoneNumber, photo, email);
 
         // Reset error or success
         toast.dismiss();

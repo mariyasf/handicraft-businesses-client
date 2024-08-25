@@ -27,6 +27,16 @@ const AuthProvider = ({ children }) => {
         setLoding(true);
         return signInWithPopup(auth, googleProvider)
     }
+    // Update Profile
+    const updateUserProfile = (name, image, phoneNumber) => {
+        setLoding(true);
+        return updateProfile(auth.currentUser, {
+            displayName: name,
+            photoURL: image,
+            phoneNumber: phoneNumber
+        })
+    }
+
     // Logout
     const logOut = async () => {
         setLoding(true);
@@ -38,15 +48,7 @@ const AuthProvider = ({ children }) => {
         return signOut(auth);
     }
 
-    // Update Profile
-    const updateUserProfile = (name, image, phoneNumber) => {
-        setLoding(true);
-        return updateProfile(auth.currentUser, {
-            displayName: name,
-            photoURL: image,
-            phoneNumber: phoneNumber
-        })
-    }
+
 
     useEffect(() => {
         const unSubscribe = onAuthStateChanged(auth, currentUser => {
