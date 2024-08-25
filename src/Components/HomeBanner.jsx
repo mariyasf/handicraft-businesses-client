@@ -34,8 +34,7 @@ const HomeBanner = () => {
 
             >
                 <SwiperSlide className='w-full h-full'>
-                    {/* <img src={b1} className='w-full h-full' alt="" /> */}
-                    <LazyLoadImage
+                   <LazyLoadImage
                         src={b1}
                         alt="Banner 1"
                         effect="opacity"

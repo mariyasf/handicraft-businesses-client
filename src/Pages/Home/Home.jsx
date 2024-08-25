@@ -1,6 +1,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import HomeBanner from '../../Components/HomeBanner';
+import Service from '../../Components/Service';
+import MostProducts from '../../Components/MostProducts';
 
 const Home = () => {
     return (
@@ -9,6 +11,9 @@ const Home = () => {
                 <title>Home</title>
             </Helmet>
             <HomeBanner />
+            <Service />
+            <MostProducts />
+
 
         </div>
     );
