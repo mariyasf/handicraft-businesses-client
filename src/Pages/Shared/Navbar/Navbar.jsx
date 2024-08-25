@@ -8,7 +8,7 @@ import UseTheme from "../../../Hooks/UseTheme";
 
 const Navbar = () => {
     const { user, logOut } = UseAuth();
-    // console.log(user);
+    console.log(user);
     const [theme, setTheme] = UseTheme();
 
     const handleToggle = (e) => {
@@ -22,7 +22,10 @@ const Navbar = () => {
             .then()
             .catch()
     }
-
+    function isValidURL(url) {
+        const urlPattern = /^(ftp|http|https):\/\/[^ "]+$/;
+        return urlPattern.test(url);
+    }
 
     const navLinks = <>
         <li>
@@ -95,12 +98,15 @@ const Navbar = () => {
                                     >
 
                                         <div className="w-10 rounded-full">
+                                            <img alt="Profile"
+                                                src={
+                                                    user &&
+                                                        isValidURL(user.photoURL) ?
+                                                        user.photoURL : profile
+                                                } />
 
-                                            {
-                                                user ?
-                                                    <IoPersonCircleSharp className="h-10 w-10" />
-                                                    : <img src={user.photoURL} alt="" />
-                                            }
+
+
                                         </div>
 
                                     </div>

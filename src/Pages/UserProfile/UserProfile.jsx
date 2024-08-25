@@ -70,7 +70,7 @@ const UserProfile = () => {
                     <div className='text-center'>
                         <img alt="Profile"
                             className="rounded-full w-32 h-32 mx-auto"
-                            src={profile} />
+                            src={updateUserInfo && isValidURL(updateUserInfo.photoURL) ? updateUserInfo.photoURL : profile} />
 
                         <p className='text-xl font-Cormorrant font-bold'> {updateUserInfo.displayName}</p>
                         <p className='text-gray-500 font-Cormorrant'> {updateUserInfo.email}</p>

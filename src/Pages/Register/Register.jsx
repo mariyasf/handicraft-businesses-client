@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify';
 import UseAuth from '../../Hooks/UseAuth';
 import { IoEye, IoEyeOff } from 'react-icons/io5';
@@ -10,7 +10,6 @@ const Register = () => {
     const { createNewUser, updateUserProfile } = UseAuth();
 
     const [showPass, setShowPass] = useState(false);
-    const location = useLocation();
     const navigate = useNavigate();
 
     const handleRegister = async (e) => {
@@ -21,7 +20,7 @@ const Register = () => {
         const fname = form.get('fname');
         const lname = form.get('lname');
         const email = form.get('email');
-        const photo = ""
+        const photo = form.get('imageUrl');
         const phoneNumber = form.get('phoneNumber');
         const password = form.get('password');
         const termsAC = e.target.terms.checked;
@@ -55,7 +54,7 @@ const Register = () => {
             const result = createNewUser(email, password)
             console.log('User: ', result);
 
-            toast.success('Registration successful! You can now log in.');
+            // toast.success('Registration successful! You can now log in.');
 
             updateUserProfile(fullName, photo, phoneNumber)
                 .then()
@@ -76,12 +75,15 @@ const Register = () => {
                     // console.log(data);
                     if (data.insertedId) {
                         console.log('Register user')
+                        toast.success('Registration successful! You can now log in.');
                     }
                 })
 
             e.target.reset();
-            navigate(location?.state ? location.state : '/profile')
+            navigate('/login')
+
         }
+
         catch (error) {
             console.error(error);
             toast.error('Registration failed. Please try again later.');
@@ -96,8 +98,8 @@ const Register = () => {
             </Helmet>
             <ToastContainer />
 
-            <div className="flex flex-col md:flex-row h-screen ">
-                <div className='flex-1 hidden md:block'>
+            <div className="lg:flex lg:flex-row h-full">
+                <div className='flex-1 hidden lg:block h-screen'>
                     <div className="h-full bg-cover bg-center bg-no-repeat bg-[url('./Images/lr.png')] 
                     text-center text-white space-y-4 font-Cormorrant
                     flex flex-col items-center justify-center
@@ -111,11 +113,11 @@ const Register = () => {
                 <div className="font-Poppins
                  flex-1  shrink-0 max-w-[600px] ">
                     <h2 className='mx-10 border-b-4 border-[#c09d73] w-1/3 pb-4 md:pt-10 
-                    text-xl md:text-2xl lg:text-3xl font-bold font-Cormorrant'>Register Now</h2>
+                    text-xl lg:text-3xl font-bold font-Cormorrant'>Register Now</h2>
 
-                    <form className="px-10 pt-4 space-y-4 font-Poppins"
+                    <form className="px-10 pt-4 lg:space-y-4 font-Poppins"
                         onSubmit={handleRegister}>
-                        <div className="flex flex-col lg:flex-row gap-5">
+                        <div className="flex flex-col lg:flex-row gap-2 lg:gap-5">
                             <div className="form-control w-full">
                                 <label className="label">
                                     <span className="label-text">First Name</span>
@@ -131,7 +133,7 @@ const Register = () => {
 
                         </div>
 
-                        <div className="flex flex-col lg:flex-row gap-5">
+                        <div className="flex flex-col lg:flex-row gap-2 lg:gap-5">
                             <div className="form-control w-full">
                                 <label className="label">
                                     <span className="label-text">Phone Number</span>
@@ -144,6 +146,13 @@ const Register = () => {
                                 </label>
                                 <input type="email" name="email" placeholder="email" className="input input-bordered" required />
                             </div>
+                        </div>
+
+                        <div className="form-control">
+                            <label className="label">
+                                <span className="label-text">Photo URL</span>
+                            </label>
+                            <input type="text" name="imageUrl" placeholder="Photo URL" className="input input-bordered" required />
                         </div>
 
                         <div className="form-control flex">

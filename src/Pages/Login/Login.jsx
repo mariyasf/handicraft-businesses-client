@@ -2,9 +2,11 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import UseAuth from "../../Hooks/UseAuth";
 import UseAxiosSecure from "../../Hooks/UseAxiosSecure";
+import { FcGoogle } from "react-icons/fc";
+import { FaGithub } from "react-icons/fa";
 
 const Login = () => {
-    const { signIn, handleGoogleSignIn } = UseAuth();
+    const { signIn, handleGoogleSignIn, handleGithubSignIn } = UseAuth();
     const axiosSecure = UseAxiosSecure()
     const location = useLocation();
     const navigate = useNavigate();
@@ -57,6 +59,18 @@ const Login = () => {
         }
     }
 
+    const handleGithub = () => {
+        handleGithubSignIn()
+            .then(result => {
+                console.log(result.user)
+                // NAvigate after login
+                navigate(location?.state ? location.state : '/')
+            })
+            .catch(error => {
+                console.error(error);
+            })
+    }
+
     return (
         <div>
             <Helmet>
@@ -64,9 +78,9 @@ const Login = () => {
             </Helmet>
 
             <div
-                className="flex flex-col md:flex-row h-screen
+                className="lg:flex lg:flex-row h-screen
              ">
-                <div className='flex-1 hidden md:block'>
+                <div className='flex-1 hidden lg:block'>
                     <div className="h-full bg-cover bg-center bg-no-repeat bg-[url('/Images/lr.png')] 
                     text-center text-white space-y-4 font-Cormorrant
                     flex flex-col items-center justify-center
@@ -84,7 +98,6 @@ const Login = () => {
 
                     <h2 className='mx-10 border-b-4 border-[#c09d73] w-1/3 pb-4 md:pt-10 
                     text-xl md:text-2xl lg:text-3xl font-bold font-Cormorrant'>Login Now</h2>
-
 
 
                     <form
@@ -107,21 +120,20 @@ const Login = () => {
                             <button className="btn bg-[#c09d73] uppercase text-white">Login</button>
                         </div>
                     </form>
-                    <div className="px-10 pt-2 font-mono" >
-                        <button
-                            onClick={handleGoogleLogin}
-                            className="py-2 flex items-center justify-center gap-5  border-2 border-[#c09d73] hover:bg-[#c09d73] hover:text-white rounded-lg w-full">
 
-                            <img
+                    <h2 className='text-center pt-5 font-mono'>Or Contune With</h2>
 
-                                className=" w-10 h-10"
-                                src="/Images/g_logo.png" alt="" />
-                            <span className="font-bold">Login With Google</span>
-
+                    <div className="text-center space-x-5 pt-5" >
+                        <button className="text-4xl" onClick={handleGoogleLogin}>
+                            <FcGoogle />
+                        </button>
+                        <button className="text-4xl"
+                            onClick={handleGithub}>
+                            <FaGithub />
                         </button>
                     </div>
 
-                    <div className='text-center pt-5'>
+                    <div className='text-center text-lg pt-5'>
                         <p>New to BD Handicrafts? Please <Link className='text-[#c09d73] font-bold' to={'/register'}>Register</Link> </p>
                     </div>
                 </div>
