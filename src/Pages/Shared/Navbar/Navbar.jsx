@@ -57,7 +57,7 @@ const Navbar = () => {
     </>
     return (
 
-        <div className="bg-[#c09d73] fixed w-full">
+        <div className="bg-[#c09d73] fixed w-full z-50">
             <div className=" navbar font-Poppins p-5 min-w-[500px] max-w-[1240px] mx-auto">
                 <div className="navbar-start">
                     <div className="dropdown">
