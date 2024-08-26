@@ -8,7 +8,7 @@ import UseTheme from "../../../Hooks/UseTheme";
 
 const Navbar = () => {
     const { user, logOut } = UseAuth();
-    console.log(user);
+    // console.log(user);
     const [theme, setTheme] = UseTheme();
 
     const handleToggle = (e) => {
@@ -17,6 +17,7 @@ const Navbar = () => {
         }
         else setTheme('light');
     }
+
     const handleSignOut = () => {
         logOut()
             .then()
@@ -57,8 +58,8 @@ const Navbar = () => {
     </>
     return (
 
-        <div className="bg-[#c09d73] fixed w-full">
-            <div className=" navbar font-Poppins p-5 min-w-[500px] max-w-[1240px] mx-auto">
+        <div className="bg-[#c09d73] fixed w-full z-50">
+            <div className=" navbar font-Poppins p-5 lg:px-0 min-w-[500px] max-w-[1240px] mx-auto">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="mr-5 lg:hidden">
@@ -71,8 +72,8 @@ const Navbar = () => {
                     </div>
 
                     <Link to={"/"}>
-                        <a className="flex items-center gap-2 text-3xl">
-                            <img src={logo} className="w-10 h-10" alt="" />
+                        <a className="flex items-center gap-2  md:text-3xl">
+                            <img src={logo} className="w-8 md:w-10 h-8 md:h-10" alt="" />
                             <span className="font-Rancho text-[#421b01]">BD
                                 <span className="text-white"> Handicrafts</span></span>
                         </a>

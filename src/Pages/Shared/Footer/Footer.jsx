@@ -7,7 +7,7 @@ const Footer = () => {
         <div>
             <footer className='bg-[#c09d73]'>
                 <section className="footer footer-center max-w-[1240px] mx-auto
-                 text-base-content rounded p-10
+                 text-base-content rounded p-5 lg:px-0
                 flex flex-col lg:flex-row gap-5 justify-between">
                     <aside>
                         <img src="/logo.png" className='h-[80px] w-[80px]' alt="" />
