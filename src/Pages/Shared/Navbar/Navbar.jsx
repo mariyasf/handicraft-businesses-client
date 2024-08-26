@@ -8,7 +8,7 @@ import UseTheme from "../../../Hooks/UseTheme";
 
 const Navbar = () => {
     const { user, logOut } = UseAuth();
-    console.log(user);
+    // console.log(user);
     const [theme, setTheme] = UseTheme();
 
     const handleToggle = (e) => {

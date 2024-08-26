@@ -15,7 +15,7 @@ const Offers = () => {
             </div>
             <div className="flex-1 bg-base-200 flex  flex-col items-center justify-center
                       p-10 space-y-5 text-center">
-                <h2 className="font-Rancho text-[#421b01] text-3xl 
+                <h2 className="font-Rancho theme_title text-3xl 
                     lg:text-3xl font-bold">Special Offer!</h2>
                 <h2 className="font-Cormorrant text-3xl 
                     lg:text-5xl font-bold">
