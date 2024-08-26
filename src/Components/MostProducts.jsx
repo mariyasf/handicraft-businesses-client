@@ -6,10 +6,10 @@ import m3 from "/Images/m3.jpg"
 const MostProducts = () => {
     return (
         <div className='max-w-[1240px] mx-auto pt-10 px-5 lg:px-0'>
-            <div className='space-y-2 pb-5 flex flex-row justify-between gap-5'>
+            <div className='space-y-2 pb-5 flex flex-col md:flex-row justify-between gap-5'>
                 <div className='flex-1'>
                     <p className='text-gray-600'>
-                        Customer Demand
+                        Trending Products
                     </p>
                     <h2 className='text-3xl  theme_title font-bold font-Rancho'>
                         Most Demand Product
@@ -30,7 +30,7 @@ const MostProducts = () => {
                             src={m1}
                             className="flex-1 max-h-[250px] lg:max-w-xs rounded-xl" />
                         <div className='flex-1'>
-                            <h1 className="text-5xl font-bold">Jute carpets</h1>
+                            <h1 className="text-xl md:text-5xl font-bold">Jute carpets</h1>
                             <p className="py-6">
                                 Jute carpets are durable, eco-friendly rugs made from natural jute fibers. They feature a rustic texture and warm, neutral tones, adding a touch of earthy elegance to any space.
                             </p>
@@ -44,7 +44,7 @@ const MostProducts = () => {
                             src={m2}
                             className="flex-1 max-h-[250px] rounded-lg" />
                         <div className='flex-1'>
-                            <h1 className="text-5xl font-bold">Jute wall decor</h1>
+                            <h1 className="text-xl md:text-5xl font-bold">Jute wall decor</h1>
                             <p className="py-6">
                                 Jute wall decor is a sustainable choice that brings warmth, organic aesthetics, and a touch of natural elegance to homes and offices alike.
                             </p>
@@ -57,7 +57,7 @@ const MostProducts = () => {
                             src={m3}
                             className="flex-1 max-h-[250px] rounded-lg" />
                         <div className='flex-1'>
-                            <h1 className="text-5xl font-bold">Jute bags</h1>
+                            <h1 className="text-xl lg:text-5xl font-bold">Jute bags</h1>
                             <p className="py-6">
                                 Jute bags offer a sustainable alternative to plastic, featuring earthy textures and often decorated with unique prints or patterns for added style
                             </p>

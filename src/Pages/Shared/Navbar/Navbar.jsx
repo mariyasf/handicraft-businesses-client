@@ -17,6 +17,7 @@ const Navbar = () => {
         }
         else setTheme('light');
     }
+
     const handleSignOut = () => {
         logOut()
             .then()
@@ -71,8 +72,8 @@ const Navbar = () => {
                     </div>
 
                     <Link to={"/"}>
-                        <a className="flex items-center gap-2 text-3xl">
-                            <img src={logo} className="w-10 h-10" alt="" />
+                        <a className="flex items-center gap-2  md:text-3xl">
+                            <img src={logo} className="w-8 md:w-10 h-8 md:h-10" alt="" />
                             <span className="font-Rancho text-[#421b01]">BD
                                 <span className="text-white"> Handicrafts</span></span>
                         </a>

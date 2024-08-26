@@ -13,13 +13,13 @@ const Offers = () => {
                     src="/Images/offer.mp4"></video>
 
             </div>
-            <div className="flex-1 bg-base-200 flex  flex-col items-center justify-center
-                      p-10 space-y-5 text-center">
+            <div className="flex-1 bg-base-200 flex  flex-col  justify-center
+                      p-10 space-y-5 ">
+                <p className='text-gray-600'>Special Offer</p>
                 <h2 className="font-Rancho theme_title text-3xl 
-                    lg:text-3xl font-bold">Special Offer!</h2>
-                <h2 className="font-Cormorrant text-3xl 
-                    lg:text-5xl font-bold">
-                    Get <span className="font-Poppins text-[#fac056]"> 40%</span> Discount during our Summer Craft Festival!
+                    lg:text-3xl font-bold">Limited Time Offer!</h2>
+                <h2 className="">
+                    Get <span className="font-Poppins text-[#fac056]"> 40%</span> Discount during our Summer Craft Festival. Explore our handcrafted jute products, eco-friendly bags, and unique décor items at unbeatable prices. Hurry, the offer ends soon!
 
                 </h2>
                 <Link>

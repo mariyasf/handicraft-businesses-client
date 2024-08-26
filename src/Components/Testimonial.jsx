@@ -4,7 +4,7 @@ import { FaLongArrowAltLeft, FaLongArrowAltRight } from 'react-icons/fa';
 const Testimonial = () => {
     return (
         <div className='max-w-[1240px] mx-auto px-5 lg:p-0 my-10'>
-            <div className='space-y-2 pb-5 flex flex-row justify-between gap-5'>
+            <div className='space-y-2 pb-5 flex flex-col md:flex-row justify-between gap-5'>
                 <div className='flex-1'>
                     <p className='text-gray-600'>
                         Testimonial
