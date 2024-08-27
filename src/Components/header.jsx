@@ -2,6 +2,7 @@ import React, { useState, useEffect} from 'react'
 import { Link } from 'react-router-dom'
 import iconCart from '../assets/images/iconCart.png' 
 import { useSelector, useDispatch } from 'react-redux' 
+
 const Header = () => {
   const [totalQuantity, setTotalQuantity] = useState(0);
     const carts = useSelector(store => store.cart.items);
