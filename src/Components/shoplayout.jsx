@@ -3,7 +3,7 @@ import { Outlet } from 'react-router-dom'
 import Header from './header'
 import CartTab from './cartTab' 
 import { useSelector } from 'react-redux'
-const Layout = () => {
+const Shoplayout = () => {
   const statusTabCart = useSelector(store => store.cart.statusTab);
   return (
     <div className='bg-zinc-200'>
@@ -17,4 +17,4 @@ const Layout = () => {
   )
 }
 
-export default Layout
+export default Shoplayout
