@@ -4,8 +4,8 @@ export const products = [
         name: "Jute Handcrafted Tote Bag",
         price: 101,
         image: [
-            "F:\Industrial Training\handicraft-businesses-client\src\assets\images\10.jpeg",
-            "F:\Industrial Training\handicraft-businesses-client\src\assets\images\11.jpeg"
+            "https://i.ibb.co/hYbFj8v/candle-holder.jpg",
+            "https://i.ibb.co/hYbFj8v/candle-holder.jpg"
         ],
         description: "A durable and eco-friendly jute tote bag perfect for daily use.",
         material: "Jute",
@@ -19,8 +19,8 @@ export const products = [
         name: "Jute Coasters Set",
         price: 101,
         image: [
-        "F:\Industrial Training\handicraft-businesses-client\src\assets\images\10.jpeg",
-        "F:\Industrial Training\handicraft-businesses-client\src\assets\images\11.jpeg"
+            "https://i.ibb.co/hYbFj8v/candle-holder.jpg",
+            "https://i.ibb.co/hYbFj8v/candle-holder.jpg"
         ],
         description: "Handmade jute coasters that protect your surfaces while adding a rustic charm.",
         material: "Jute",
@@ -34,8 +34,8 @@ export const products = [
         name: "Jute Storage Basket",
         price: 101,
         image: [
-     "F:\Industrial Training\handicraft-businesses-client\src\assets\images\10.jpeg",
-        "F:\Industrial Training\handicraft-businesses-client\src\assets\images\11.jpeg"
+            "https://i.ibb.co/hYbFj8v/candle-holder.jpg",
+            "https://i.ibb.co/hYbFj8v/candle-holder.jpg"
         ],
         description: "Versatile jute storage basket ideal for organizing your home.",
         material: "Jute",
@@ -49,8 +49,8 @@ export const products = [
         name: "Jute Table Runner",
         price: 101,
        image: [
-        "F:\Industrial Training\handicraft-businesses-client\src\assets\images\10.jpeg",
-        "F:\Industrial Training\handicraft-businesses-client\src\assets\images\11.jpeg"
+        "https://i.ibb.co/hYbFj8v/candle-holder.jpg",
+            "https://i.ibb.co/hYbFj8v/candle-holder.jpg"
         ],
         description: "Elegant jute table runner to enhance the look of your dining table.",
         material: "Jute",
@@ -64,8 +64,8 @@ export const products = [
         name: "Jute Wall Hanging",
         price: 101,
        image: [
-        "F:\Industrial Training\handicraft-businesses-client\src\assets\images\10.jpeg",
-        "F:\Industrial Training\handicraft-businesses-client\src\assets\images\11.jpeg"
+        "https://i.ibb.co/hYbFj8v/candle-holder.jpg",
+            "https://i.ibb.co/hYbFj8v/candle-holder.jpg"
         ],
         description: "Decorative jute wall hanging that adds a natural touch to your home decor.",
         material: "Jute",
@@ -79,8 +79,8 @@ export const products = [
         name: "Jute Beach Mat",
         price: 101,
        image: [
-        "F:\Industrial Training\handicraft-businesses-client\src\assets\images\10.jpeg",
-        "F:\Industrial Training\handicraft-businesses-client\src\assets\images\11.jpeg"
+        "https://i.ibb.co/hYbFj8v/candle-holder.jpg",
+            "https://i.ibb.co/hYbFj8v/candle-holder.jpg"
         ],
         description: "Comfortable and stylish jute mat ideal for beach outings or picnics.",
         material: "Jute",
@@ -94,8 +94,8 @@ export const products = [
         name: "Jute Plant Pot Cover",
         price: 101,
        image: [
-        "F:\Industrial Training\handicraft-businesses-client\src\assets\images\10.jpeg",
-        "F:\Industrial Training\handicraft-businesses-client\src\assets\images\11.jpeg"
+        "https://i.ibb.co/hYbFj8v/candle-holder.jpg",
+        "https://i.ibb.co/hYbFj8v/candle-holder.jpg"
         ],
         description: "Handmade jute cover that adds a rustic look to your plant pots.",
         material: "Jute",
@@ -109,8 +109,8 @@ export const products = [
         name: "Jute Phone Case",
         price: 101,
        image: [
-        "F:\Industrial Training\handicraft-businesses-client\src\assets\images\10.jpeg",
-        "F:\Industrial Training\handicraft-businesses-client\src\assets\images\11.jpeg"
+        "https://i.ibb.co/hYbFj8v/candle-holder.jpg",
+            "https://i.ibb.co/hYbFj8v/candle-holder.jpg"
         ],
         description: "Eco-friendly jute phone case that provides protection and style.",
         material: "Jute",
@@ -124,8 +124,8 @@ export const products = [
         name: "Jute  Bottle Holder",
         price: 101,
        image: [
-        "F:\Industrial Training\handicraft-businesses-client\src\assets\images\10.jpeg",
-        "F:\Industrial Training\handicraft-businesses-client\src\assets\images\11.jpeg"
+        "https://i.ibb.co/hYbFj8v/candle-holder.jpg",
+            "https://i.ibb.co/hYbFj8v/candle-holder.jpg"
         ],
         description: "Chic jute holder for  bottles, perfect for gifting or personal use.",
         material: "Jute",
@@ -139,8 +139,8 @@ export const products = [
         name: "Jute Handbag",
         price: 101,
        image: [
-        "F:\Industrial Training\handicraft-businesses-client\src\assets\images\10.jpeg",
-        "F:\Industrial Training\handicraft-businesses-client\src\assets\images\11.jpeg"
+        "https://i.ibb.co/hYbFj8v/candle-holder.jpg",
+        "https://i.ibb.co/hYbFj8v/candle-holder.jpg"
         ],
         description: "Stylish and spacious jute handbag suitable for various occasions.",
         material: "Jute",
@@ -154,8 +154,8 @@ export const products = [
         name: "Jute Rug",
         price: 101,
        image: [
-        "F:\Industrial Training\handicraft-businesses-client\src\assets\images\10.jpeg",
-        "F:\Industrial Training\handicraft-businesses-client\src\assets\images\11.jpeg"
+        "https://i.ibb.co/hYbFj8v/candle-holder.jpg",
+        "https://i.ibb.co/hYbFj8v/candle-holder.jpg"
         ],
         description: "Durable jute rug that adds a natural touch to your flooring.",
         material: "Jute",
@@ -169,8 +169,8 @@ export const products = [
         name: "Jute Keychain",
         price: 101,
        image: [
-        "F:\Industrial Training\handicraft-businesses-client\src\assets\images\10.jpeg",
-        "F:\Industrial Training\handicraft-businesses-client\src\assets\images\11.jpeg"
+        "https://i.ibb.co/hYbFj8v/candle-holder.jpg",
+        "https://i.ibb.co/hYbFj8v/candle-holder.jpg"
         ],
         description: "Small and practical jute keychain for a touch of eco-friendliness.",
         material: "Jute",
@@ -184,8 +184,8 @@ export const products = [
         name: "Jute Bookmark",
         price: 101,
        image: [
-        "F:\Industrial Training\handicraft-businesses-client\src\assets\images\10.jpeg",
-        "F:\Industrial Training\handicraft-businesses-client\src\assets\images\11.jpeg"
+        "https://i.ibb.co/hYbFj8v/candle-holder.jpg",
+        "https://i.ibb.co/hYbFj8v/candle-holder.jpg"
         ],
         description: "Handmade jute bookmarks that add a touch of elegance to your reading.",
         material: "Jute",
@@ -199,8 +199,8 @@ export const products = [
         name: "Jute Shopping Bag",
         price: 101,
        image: [
-        "F:\Industrial Training\handicraft-businesses-client\src\assets\images\10.jpeg",
-        "F:\Industrial Training\handicraft-businesses-client\src\assets\images\11.jpeg"
+        "https://i.ibb.co/hYbFj8v/candle-holder.jpg",
+        "https://i.ibb.co/hYbFj8v/candle-holder.jpg"
         ],
         description: "Reusable jute shopping bag with ample space for groceries and more.",
         material: "Jute",
@@ -214,8 +214,8 @@ export const products = [
         name: "Jute Pencil Case",
         price: 101,
        image: [
-        "F:\Industrial Training\handicraft-businesses-client\src\assets\images\10.jpeg",
-        "F:\Industrial Training\handicraft-businesses-client\src\assets\images\11.jpeg"
+        "https://i.ibb.co/hYbFj8v/candle-holder.jpg",
+        "https://i.ibb.co/hYbFj8v/candle-holder.jpg"
         ],
         description: "Compact and stylish jute pencil case for students and professionals.",
         material: "Jute",
@@ -223,95 +223,5 @@ export const products = [
        num_of_prod: 70,
         rating: 4,
         slug: "jute-pencil-case"
-    },
-    {
-        id: 16,
-        name: "Jute Apron",
-        price: 101,
-       image: [
-        "F:\Industrial Training\handicraft-businesses-client\src\assets\images\10.jpeg",
-        "F:\Industrial Training\handicraft-businesses-client\src\assets\images\11.jpeg"
-        ],
-        description: "Durable jute apron ideal for cooking or crafting.",
-        material: "Jute",
-        method: "Handwoven and stitched",
-       num_of_prod: 25,
-        rating: 5,
-        slug: "jute-apron"
-    },
-    {
-        id: 17,
-        name: "Jute Decorative Bowls",
-        price: 101,
-       image: [
-        "F:\Industrial Training\handicraft-businesses-client\src\assets\images\10.jpeg",
-        "F:\Industrial Training\handicraft-businesses-client\src\assets\images\11.jpeg"
-        ],
-        description: "Handmade jute bowls for decorative or practical use.",
-        material: "Jute",
-        method: "Handwoven",
-       num_of_prod: 20,
-        rating: 4,
-        slug: "jute-decorative-bowls"
-    },
-    {
-        id: 18,
-        name: "Jute Jewelry Box",
-        price: 101,
-       image: [
-        "F:\Industrial Training\handicraft-businesses-client\src\assets\images\10.jpeg",
-        "F:\Industrial Training\handicraft-businesses-client\src\assets\images\11.jpeg"
-        ],
-        description: "Elegant jute jewelry box with compartments for safe storage.",
-        material: "Jute",
-        method: "Handwoven and stitched",
-       num_of_prod: 15,
-        rating: 5,
-        slug: "jute-jewelry-box"
-    },
-    {
-        id: 19,
-        name: "Jute Cushion Cover",
-        price: 101,
-       image: [
-        "F:\Industrial Training\handicraft-businesses-client\src\assets\images\10.jpeg",
-        "F:\Industrial Training\handicraft-businesses-client\src\assets\images\11.jpeg"
-        ],
-        description: "Stylish jute cushion cover to add texture and warmth to your sofa.",
-        material: "Jute",
-        method: "Handwoven",
-       num_of_prod: 40,
-        rating: 4,
-        slug: "jute-cushion-cover"
-    },
-    {
-        id: 20,
-        name: "Jute Door Mat",
-        price: 101,
-       image: [
-        "F:\Industrial Training\handicraft-businesses-client\src\assets\images\10.jpeg",
-        "F:\Industrial Training\handicraft-businesses-client\src\assets\images\11.jpeg"
-        ],
-        description: "Durable jute door mat that welcomes guests with a natural touch.",
-        material: "Jute",
-        method: "Handwoven",
-       num_of_prod: 30,
-        rating: 5,
-        slug: "jute-door-mat"
-    },
-    {
-        id: 21,
-        name: "Jute Candle Holder",
-        price: 101,
-       image: [
-        "F:\Industrial Training\handicraft-businesses-client\src\assets\images\10.jpeg",
-        "F:\Industrial Training\handicraft-businesses-client\src\assets\images\11.jpeg"
-        ],
-        description: "Decorative jute candle holder that adds a cozy ambiance to any room.",
-        material: "Jute",
-        method: "Handwoven and stitched",
-       num_of_prod: 25,
-        rating: 4,
-        slug: "jute-candle-holder"
     }
 ];

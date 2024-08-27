@@ -1,6 +1,6 @@
 import React, { useState, useEffect} from 'react'
 import { Link } from 'react-router-dom'
-import iconCart from '../assets/images/iconCart.png' 
+import iconCart from '/iconCart.png' 
 import { useSelector, useDispatch } from 'react-redux' 
 
 const Header = () => {

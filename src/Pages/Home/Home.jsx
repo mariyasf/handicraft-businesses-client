@@ -7,8 +7,6 @@ import Offers from '../../Components/Offers';
 import ClientQuestion from '../../Components/ClientQuestion';
 import Testimonial from '../../Components/Testimonial';
 import TodayDeals from '../../Components/TodayDeals';
-import Layout from '../../Components/layout';
-import Detail from '../../Pages/Shop/detail';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 const Home = () => {
     return (

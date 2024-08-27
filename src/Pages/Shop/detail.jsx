@@ -1,8 +1,8 @@
 import React, { useEffect, useState} from 'react'
 import { useParams } from 'react-router-dom' 
-import { products } from '../products';
+import { products } from '../../products';
 import { useDispatch } from 'react-redux';
-import { addToCart } from '../stores/cart';
+import { addToCart } from '../../stores/cart';
 const Detail = () => {
   const { slug } = useParams();
     const [detail, setDetail] = useState([]);

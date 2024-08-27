@@ -1,7 +1,7 @@
 
 import React from 'react' 
 import { Link } from 'react-router-dom';
-import iconCart from 'F:\Industrial Training\handicraft-businesses-client\src\assets\images\iconCart.png'
+import iconCart from '/iconCart.png';
 import { useSelector, useDispatch } from 'react-redux';
 import { addToCart } from '../stores/cart';
 
