@@ -2,6 +2,7 @@ export const products = [
     {
         id: 1,
         name: "Jute Handcrafted Tote Bag",
+        price: 101,
         image: [
             "F:\Industrial Training\handicraft-businesses-client\src\assets\images\10.jpeg",
             "F:\Industrial Training\handicraft-businesses-client\src\assets\images\11.jpeg"
@@ -16,6 +17,7 @@ export const products = [
     {
         id: 2,
         name: "Jute Coasters Set",
+        price: 101,
         image: [
         "F:\Industrial Training\handicraft-businesses-client\src\assets\images\10.jpeg",
         "F:\Industrial Training\handicraft-businesses-client\src\assets\images\11.jpeg"
@@ -30,6 +32,7 @@ export const products = [
     {
         id: 3,
         name: "Jute Storage Basket",
+        price: 101,
         image: [
      "F:\Industrial Training\handicraft-businesses-client\src\assets\images\10.jpeg",
         "F:\Industrial Training\handicraft-businesses-client\src\assets\images\11.jpeg"
@@ -44,6 +47,7 @@ export const products = [
     {
         id: 4,
         name: "Jute Table Runner",
+        price: 101,
        image: [
         "F:\Industrial Training\handicraft-businesses-client\src\assets\images\10.jpeg",
         "F:\Industrial Training\handicraft-businesses-client\src\assets\images\11.jpeg"
@@ -58,6 +62,7 @@ export const products = [
     { 
         id: 5,
         name: "Jute Wall Hanging",
+        price: 101,
        image: [
         "F:\Industrial Training\handicraft-businesses-client\src\assets\images\10.jpeg",
         "F:\Industrial Training\handicraft-businesses-client\src\assets\images\11.jpeg"
@@ -72,6 +77,7 @@ export const products = [
     {
         id: 6,
         name: "Jute Beach Mat",
+        price: 101,
        image: [
         "F:\Industrial Training\handicraft-businesses-client\src\assets\images\10.jpeg",
         "F:\Industrial Training\handicraft-businesses-client\src\assets\images\11.jpeg"
@@ -86,6 +92,7 @@ export const products = [
     {
         id: 7,
         name: "Jute Plant Pot Cover",
+        price: 101,
        image: [
         "F:\Industrial Training\handicraft-businesses-client\src\assets\images\10.jpeg",
         "F:\Industrial Training\handicraft-businesses-client\src\assets\images\11.jpeg"
@@ -100,6 +107,7 @@ export const products = [
     {
         id: 8,
         name: "Jute Phone Case",
+        price: 101,
        image: [
         "F:\Industrial Training\handicraft-businesses-client\src\assets\images\10.jpeg",
         "F:\Industrial Training\handicraft-businesses-client\src\assets\images\11.jpeg"
@@ -114,6 +122,7 @@ export const products = [
     {
         id: 9,
         name: "Jute  Bottle Holder",
+        price: 101,
        image: [
         "F:\Industrial Training\handicraft-businesses-client\src\assets\images\10.jpeg",
         "F:\Industrial Training\handicraft-businesses-client\src\assets\images\11.jpeg"
@@ -128,6 +137,7 @@ export const products = [
     {
         id: 10,
         name: "Jute Handbag",
+        price: 101,
        image: [
         "F:\Industrial Training\handicraft-businesses-client\src\assets\images\10.jpeg",
         "F:\Industrial Training\handicraft-businesses-client\src\assets\images\11.jpeg"
@@ -142,6 +152,7 @@ export const products = [
     {
         id: 11,
         name: "Jute Rug",
+        price: 101,
        image: [
         "F:\Industrial Training\handicraft-businesses-client\src\assets\images\10.jpeg",
         "F:\Industrial Training\handicraft-businesses-client\src\assets\images\11.jpeg"
@@ -156,6 +167,7 @@ export const products = [
     { 
         id: 12,
         name: "Jute Keychain",
+        price: 101,
        image: [
         "F:\Industrial Training\handicraft-businesses-client\src\assets\images\10.jpeg",
         "F:\Industrial Training\handicraft-businesses-client\src\assets\images\11.jpeg"
@@ -170,6 +182,7 @@ export const products = [
     {
         id: 13,
         name: "Jute Bookmark",
+        price: 101,
        image: [
         "F:\Industrial Training\handicraft-businesses-client\src\assets\images\10.jpeg",
         "F:\Industrial Training\handicraft-businesses-client\src\assets\images\11.jpeg"
@@ -184,6 +197,7 @@ export const products = [
     {
         id: 14,
         name: "Jute Shopping Bag",
+        price: 101,
        image: [
         "F:\Industrial Training\handicraft-businesses-client\src\assets\images\10.jpeg",
         "F:\Industrial Training\handicraft-businesses-client\src\assets\images\11.jpeg"
@@ -198,6 +212,7 @@ export const products = [
     {
         id: 15,
         name: "Jute Pencil Case",
+        price: 101,
        image: [
         "F:\Industrial Training\handicraft-businesses-client\src\assets\images\10.jpeg",
         "F:\Industrial Training\handicraft-businesses-client\src\assets\images\11.jpeg"
@@ -212,6 +227,7 @@ export const products = [
     {
         id: 16,
         name: "Jute Apron",
+        price: 101,
        image: [
         "F:\Industrial Training\handicraft-businesses-client\src\assets\images\10.jpeg",
         "F:\Industrial Training\handicraft-businesses-client\src\assets\images\11.jpeg"
@@ -226,6 +242,7 @@ export const products = [
     {
         id: 17,
         name: "Jute Decorative Bowls",
+        price: 101,
        image: [
         "F:\Industrial Training\handicraft-businesses-client\src\assets\images\10.jpeg",
         "F:\Industrial Training\handicraft-businesses-client\src\assets\images\11.jpeg"
@@ -240,6 +257,7 @@ export const products = [
     {
         id: 18,
         name: "Jute Jewelry Box",
+        price: 101,
        image: [
         "F:\Industrial Training\handicraft-businesses-client\src\assets\images\10.jpeg",
         "F:\Industrial Training\handicraft-businesses-client\src\assets\images\11.jpeg"
@@ -254,6 +272,7 @@ export const products = [
     {
         id: 19,
         name: "Jute Cushion Cover",
+        price: 101,
        image: [
         "F:\Industrial Training\handicraft-businesses-client\src\assets\images\10.jpeg",
         "F:\Industrial Training\handicraft-businesses-client\src\assets\images\11.jpeg"
@@ -268,6 +287,7 @@ export const products = [
     {
         id: 20,
         name: "Jute Door Mat",
+        price: 101,
        image: [
         "F:\Industrial Training\handicraft-businesses-client\src\assets\images\10.jpeg",
         "F:\Industrial Training\handicraft-businesses-client\src\assets\images\11.jpeg"
@@ -282,6 +302,7 @@ export const products = [
     {
         id: 21,
         name: "Jute Candle Holder",
+        price: 101,
        image: [
         "F:\Industrial Training\handicraft-businesses-client\src\assets\images\10.jpeg",
         "F:\Industrial Training\handicraft-businesses-client\src\assets\images\11.jpeg"
