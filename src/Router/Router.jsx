@@ -9,7 +9,8 @@ import Login from "../Pages/Login/Login";
 import UserProfile from "../Pages/UserProfile/UserProfile";
 import PrivateRoute from "./PrivateRoute";
 import Home from "../Pages/Home/Home";
-
+import Shoplayout from '../Components/shoplayout';
+import Detail from "../Pages/Shop/Detail";
 const router = createBrowserRouter([
     {
         path: "/",
@@ -26,12 +27,25 @@ const router = createBrowserRouter([
                     <PrivateRoute><UserProfile /></PrivateRoute>
                 ,
             },
+            {
+                path: "/Shop",
+                element:
+                   <Shoplayout />
+                ,
+            },
+            {
+                path: `/:slug`,
+                element:
+                   <Detail />
+                ,
+            },
         ]
     },
     {
         path: "/login",
         element: <Login />,
     },
+    
     {
         path: "/register",
         element: <Register />,

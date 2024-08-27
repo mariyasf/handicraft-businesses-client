@@ -7,7 +7,7 @@ import Offers from '../../Components/Offers';
 import ClientQuestion from '../../Components/ClientQuestion';
 import Testimonial from '../../Components/Testimonial';
 import TodayDeals from '../../Components/TodayDeals';
-
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 const Home = () => {
     return (
         <div>
