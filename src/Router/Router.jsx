@@ -9,6 +9,7 @@ import Login from "../Pages/Login/Login";
 import UserProfile from "../Pages/UserProfile/UserProfile";
 import PrivateRoute from "./PrivateRoute";
 import Home from "../Pages/Home/Home";
+import FavList from "../Pages/FavList/FavList";
 
 const router = createBrowserRouter([
     {
@@ -25,6 +26,16 @@ const router = createBrowserRouter([
                 element:
                     <PrivateRoute><UserProfile /></PrivateRoute>
                 ,
+            },
+            {
+                path: "/favList",
+                element:
+                    <PrivateRoute><FavList /></PrivateRoute>
+                ,
+            },
+            {
+                path: "/shop",
+                
             },
         ]
     },

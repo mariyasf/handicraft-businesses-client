@@ -5,6 +5,7 @@ import "../../../index.css"
 import UseAuth from "../../../Hooks/UseAuth";
 import { IoPersonCircleSharp } from "react-icons/io5";
 import UseTheme from "../../../Hooks/UseTheme";
+import { FaHeart } from "react-icons/fa";
 
 const Navbar = () => {
     const { user, logOut } = UseAuth();
@@ -52,6 +53,11 @@ const Navbar = () => {
         <li>
             <NavLink
                 to={'/myOrder'}>Order
+            </NavLink>
+        </li>
+        <li className="flex items-center">
+            <NavLink to={"/favList"}>
+                <FaHeart />
             </NavLink>
         </li>
 

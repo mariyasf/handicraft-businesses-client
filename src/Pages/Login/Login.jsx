@@ -39,7 +39,7 @@ const Login = () => {
     }
 
     const handleGoogleLogin = async () => {
-        console.log("YES");
+        // console.log("YES");
         try {
             const result = await handleGoogleSignIn()
 

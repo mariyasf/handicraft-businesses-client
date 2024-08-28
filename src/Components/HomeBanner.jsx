@@ -9,7 +9,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 // import required modules
 import { Autoplay, Navigation, Pagination } from 'swiper/modules';
@@ -17,13 +17,13 @@ import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 const HomeBanner = () => {
     return (
-        <div className=''>
+        <div className='pt-20'>
             <Swiper
-                className="w-full h-screen"
-                spaceBetween={30}
+                className="w-full"
+                
                 centeredSlides={true}
                 autoplay={{
-                    delay: 2500,
+                    delay: 60000,
                     disableOnInteraction: false,
                 }}
                 pagination={{
@@ -34,7 +34,7 @@ const HomeBanner = () => {
 
             >
                 <SwiperSlide className='w-full h-full'>
-                   <LazyLoadImage
+                    <LazyLoadImage
                         src={b1}
                         alt="Banner 1"
                         effect="opacity"
