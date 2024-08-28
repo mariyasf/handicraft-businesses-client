@@ -1,6 +1,5 @@
 [
     {
-        "id": 1,
         "productName": "Jute Candle Holder",
         "image": "https://i.ibb.co/hYbFj8v/candle-holder.jpg",
         "description": "This eco-friendly jute candle holder adds a warm, rustic touch to any room. Handcrafted by artisans, it is designed to elevate your home decor with a natural, earthy feel. Its jute material makes it durable and sustainable, perfect for those looking to reduce their environmental footprint. The holder can be used for small to medium-sized candles and creates a cozy ambiance for both indoor and outdoor spaces.",
@@ -14,7 +13,6 @@
         "price": 25.00
     },
     {
-        "id": 2,
         "productName": "Jute Wall Hanging",
         "image": "https://i.ibb.co/myDYLcW/image.png",
         "description": "This decorative jute wall hanging brings an earthy, bohemian vibe to any space. It is crafted from natural jute fibers that are handwoven into intricate patterns by artisans. The neutral color palette ensures it complements any decor, making it a versatile piece for bedrooms, living rooms, or offices. It's durable, easy to hang, and adds texture and warmth to your home.",
@@ -28,7 +26,6 @@
         "price": 45.00
     },
     {
-        "id": 3,
         "productName": "Jute Storage Basket",
         "image": "https://i.ibb.co/nnjss4V/basket1.jpg",
         "description": "Our jute storage basket is perfect for organizing your home in an eco-friendly way. Handwoven from natural jute fibers, this basket is sturdy enough to hold toys, laundry, or other household items. The soft texture and neutral color make it a stylish addition to any room. Its flexible yet durable structure allows it to be easily moved and stored when not in use.",
@@ -41,7 +38,6 @@
         "price": 30.00
     },
     {
-        "id": 4,
         "productName": "Jute Table Runner",
         "image": "https://i.ibb.co/vVVpSZN/image.png",
         "description": "This jute table runner is an elegant and sustainable addition to any dining table. Handwoven with natural jute fibers, it adds a rustic charm to your table setting. Perfect for special occasions or everyday use, this runner is durable and easy to clean. Its earthy texture and simple design make it a timeless piece that will enhance any decor style.",
@@ -54,10 +50,9 @@
         "price": 20.00
     },
     {
-        "id": 5,
         "productName": "Jute Tote Bag",
         "image": "https://i.ibb.co/zndT34j/tote-bag2.jpg",
-        "description": "This jute tote bag is a perfect combination of style and sustainability. Made from 100% natural jute, it's an eco-friendly alternative to plastic bags. The spacious design makes it ideal for shopping, beach trips, or daily use. The sturdy handles ensure comfort and durability, while the minimalistic design complements any outfit.",
+        "description": "This jute tote bag is a perfect combination of style and sustainability. Made from 100% natural jute, it's an eco-friendly alternative to plastic bags. The spacious design makes it _ideal for shopping, beach trips, or daily use. The sturdy handles ensure comfort and durability, while the minimalistic design complements any outfit.",
         "materialsUsed": [
             "Jute"
         ],
@@ -67,23 +62,21 @@
         "price": 15.00
     },
     {
-        "id": 6,
         "productName": "Jute Coasters Set",
         "image": "https://i.ibb.co/mJY4NKp/image.png",
         "description": "This set of handcrafted jute coasters adds a rustic and eco-friendly touch to your table settings. Made from 100% natural jute, these coasters are durable, absorbent, and protect your surfaces from stains. They are easy to clean and long-lasting, making them a practical yet stylish addition to your home.",
         "materialsUsed": [
             "Jute"
         ],
-        "craftingMethods": "Handwoven by artisans using natural jute fibers, providing a rustic charm and functionality.",
+        "craftingMethods": "Handwoven by artisans using natural jute fibers, prov_iding a rustic charm and functionality.",
         "numberOfProducts": 250,
         "rating": 4,
         "price": 12.00
     },
     {
-        "id": 7,
         "productName": "Jute Floor Mat",
         "image": "https://i.ibb.co/8BKxHps/image.png",
-        "description": "This jute floor mat is perfect for adding an earthy, natural touch to any room in your home. Handwoven from durable jute fibers, it is both eco-friendly and long-lasting. The mat provides a warm, inviting texture that is perfect for living rooms, bedrooms, or entryways. Its neutral tone complements a variety of decor styles.",
+        "description": "This jute floor mat is perfect for adding an earthy, natural touch to any room in your home. Handwoven from durable jute fibers, it is both eco-friendly and long-lasting. The mat prov_ides a warm, inviting texture that is perfect for living rooms, bedrooms, or entryways. Its neutral tone complements a variety of decor styles.",
         "materialsUsed": [
             "Jute"
         ],
@@ -93,7 +86,6 @@
         "price": 60.00
     },
     {
-        "id": 8,
         "productName": "Jute Placemat Set",
         "image": "https://i.ibb.co/1RdQVxV/image.png",
         "description": "These jute placemats are handcrafted to enhance your dining experience with a natural, rustic touch. Made from 100% natural jute, the placemats are durable, eco-friendly, and easy to clean. Perfect for everyday dining or special occasions, these placemats bring warmth and texture to your table setting.",
@@ -106,7 +98,6 @@
         "price": 35.00
     },
     {
-        "id": 9,
         "productName": "Jute Plant Hanger",
         "image": "https://i.ibb.co/r4x6WP1/image.png",
         "description": "This jute plant hanger is perfect for adding a natural, bohemian touch to your home or garden. It is handcrafted from durable jute fibers, designed to hold small to medium-sized pots. The neutral tones of the jute complement any plant, making it a great addition to any indoor or outdoor space.",
@@ -119,10 +110,9 @@
         "price": 20.00
     },
     {
-        "id": 10,
         "productName": "Jute Laptop Sleeve",
         "image": "https://i.ibb.co/939tLfH/image.png",
-        "description": "This eco-friendly jute laptop sleeve provides a stylish and protective solution for your laptop. Made from 100% natural jute, the sleeve is padded for extra protection and features a soft interior lining. Perfect for those who want to reduce their carbon footprint while keeping their devices safe.",
+        "description": "This eco-friendly jute laptop sleeve prov_ides a stylish and protective solution for your laptop. Made from 100% natural jute, the sleeve is padded for extra protection and features a soft interior lining. Perfect for those who want to reduce their carbon footprint while keeping their devices safe.",
         "materialsUsed": [
             "Jute",
             "Soft Fabric Lining"
@@ -133,10 +123,9 @@
         "price": 40.00
     },
     {
-        "id": 11,
         "productName": "Jute Rug",
-        "image": "jute_rug.jpg",
-        "description": "A beautifully handcrafted jute rug that adds a natural, earthy feel to your living space. Made from high-quality jute fibers, this rug is eco-friendly and durable. Perfect for high-traffic areas in your home, providing a warm and rustic touch. Customers love this rug for its sustainability and natural beauty.",
+        "image": "https://i.ibb.co/WP914C9/rug1.jpg",
+        "description": "A beautifully handcrafted jute rug that adds a natural, earthy feel to your living space. Made from high-quality jute fibers, this rug is eco-friendly and durable. Perfect for high-traffic areas in your home, prov_iding a warm and rustic touch. Customers love this rug for its sustainability and natural beauty.",
         "materialsUsed": [
             "Jute fibers"
         ],
@@ -146,10 +135,9 @@
         "price": 45.00
     },
     {
-        "id": 12,
         "productName": "Jute Handbag",
-        "image": "jute_handbag.jpg",
-        "description": "A stylish and durable jute handbag, perfect for everyday use. Crafted from eco-friendly jute, this bag is sturdy and spacious, making it ideal for shopping, work, or travel. The unique handcrafted design ensures no two bags are alike, adding a personal touch to your style.",
+        "image": "https://i.ibb.co/zndT34j/tote-bag2.jpg",
+        "description": "A stylish and durable jute handbag, perfect for everyday use. Crafted from eco-friendly jute, this bag is sturdy and spacious, making it _ideal for shopping, work, or travel. The unique handcrafted design ensures no two bags are alike, adding a personal touch to your style.",
         "materialsUsed": [
             "Jute",
             "Cotton lining"
@@ -160,10 +148,9 @@
         "price": "35.00"
     },
     {
-        "id": 13,
         "productName": "Jute Pencil Bag",
-        "image": "jute_pencil_bag.jpg",
-        "description": "An eco-friendly jute pencil bag designed to keep your stationery organized. Its durable material ensures longevity, while its compact size makes it easy to carry around in your backpack or purse. Ideal for students and professionals alike who value sustainability and style.",
+        "image": "https://i.ibb.co/jM9tBRB/pencil-case1.jpg",
+        "description": "An eco-friendly jute pencil bag designed to keep your stationery organized. Its durable material ensures longevity, while its compact size makes it easy to carry around in your backpack or purse. _ideal for students and professionals alike who value sustainability and style.",
         "materialsUsed": [
             "Jute",
             "Zipper"
@@ -174,9 +161,8 @@
         "price": "12.00"
     },
     {
-        "id": 14,
         "productName": "Jute Phone Case",
-        "image": "jute_phone_case.jpg",
+        "image": "https://i.ibb.co/WB8zckr/phone-case1.jpg",
         "description": "Protect your phone in style with this durable jute phone case. Made from eco-friendly jute and lined with soft fabric, this case offers protection and sustainability. It’s lightweight, easy to carry, and designed for customers who appreciate eco-conscious choices.",
         "materialsUsed": [
             "Jute",
@@ -188,9 +174,8 @@
         "price": "18.00"
     },
     {
-        "id": 15,
         "productName": "Jute Jewelry Box",
-        "image": "jute_jewelry_box.jpg",
+        "image": "https://i.ibb.co/cNtHfmd/jewelry-box2.jpg",
         "description": "A handcrafted jute jewelry box designed to store your precious items with care. The sturdy jute exterior combined with a soft lining ensures that your jewelry stays protected while maintaining an elegant aesthetic. A sustainable choice for environmentally-conscious customers.",
         "materialsUsed": [
             "Jute",
@@ -202,10 +187,10 @@
         "price": "25.00"
     },
     {
-        "id": 16,
+       
         "productName": "Jute Cushion Cover",
-        "image": "jute_cushion_cover.jpg",
-        "description": "Add a touch of rustic charm to your living space with these handmade jute cushion covers. The natural texture of jute adds an earthy vibe, making your home feel cozier. Durable and easy to maintain, these covers are ideal for both indoor and outdoor use.",
+        "image": "https://i.ibb.co/Pxxv5hZ/cushion-cover1.jpg",
+        "description": "Add a touch of rustic charm to your living space with these handmade jute cushion covers. The natural texture of jute adds an earthy vibe, making your home feel cozier. Durable and easy to maintain, these covers are _ideal for both indoor and outdoor use.",
         "materialsUsed": [
             "Jute"
         ],
@@ -215,10 +200,9 @@
         "price": "20.00"
     },
     {
-        "id": 17,
         "productName": "Jute Pot Cover",
-        "image": "jute_pot_cover.jpg",
-        "description": "Elevate your indoor plant decor with these eco-friendly jute pot covers. Handmade with high-quality jute, these covers add a natural, rustic look to your home while protecting your pots. Ideal for small to medium-sized plants.",
+        "image": "https://i.ibb.co/h2Cv9FX/pot-cover1.jpg",
+        "description": "Elevate your indoor plant decor with these eco-friendly jute pot covers. Handmade with high-quality jute, these covers add a natural, rustic look to your home while protecting your pots. _ideal for small to medium-sized plants.",
         "materialsUsed": [
             "Jute"
         ],
@@ -228,9 +212,8 @@
         "price": "15.00"
     },
     {
-        "id": 18,
         "productName": "Jute Kitchen Apron",
-        "image": "jute_kitchen_apron.jpg",
+        "image": "https://i.ibb.co/NFXVvT5/apron2.jpg",
         "description": "A durable jute kitchen apron that combines style and function. Designed to withstand the wear and tear of daily cooking, this apron is perfect for chefs who appreciate sustainable materials. The adjustable straps ensure a comfortable fit for all body types.",
         "materialsUsed": [
             "Jute",
