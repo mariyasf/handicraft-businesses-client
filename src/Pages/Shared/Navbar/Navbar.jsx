@@ -51,19 +51,25 @@ const Navbar = () => {
         </li>
         <li>
             <NavLink
-                to={'/login'}>About</NavLink> </li>
-        <li>
-            <NavLink
-                to={'/register'}>
-                Contact
-            </NavLink>
-        </li>
-
-        <li>
-            <NavLink
                 to={'/shop'}>Shop
             </NavLink>
         </li>
+        <li>
+            <NavLink
+                to={'/aboutUs'}>About</NavLink> </li>
+        <li>
+            <NavLink
+                to={'/contactUs'}>
+                Contact
+            </NavLink>
+        </li>
+        <li>
+            <NavLink
+                to={'/blog'}>
+                Blog
+            </NavLink>
+        </li>
+
 
         <li className="flex items-center">
             <NavLink className={"flex gap-2"}

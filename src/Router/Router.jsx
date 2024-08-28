@@ -12,6 +12,9 @@ import FavList from "../Pages/FavList/FavList";
 import Shop from "../Pages/Shop/Shop";
 import ProductsDetails from "../Pages/Shop/ProductsDetails";
 import OrderList from "../Pages/OrderList/OrderList";
+import About from "../Pages/About/About";
+import Contact from "../Pages/Contact/Contact";
+import BlogPage from "../Pages/Blog/Blog";
 
 // =======
 // import Shoplayout from '../Components/shoplayout';
@@ -26,6 +29,21 @@ const router = createBrowserRouter([
             {
                 path: "/",
                 element: <Home />,
+
+            },
+            {
+                path: "/aboutUs",
+                element: <About />,
+
+            },
+            {
+                path: "/contactUs",
+                element: <Contact />,
+
+            },
+            {
+                path: "/blog",
+                element: <BlogPage />,
 
             },
             {
