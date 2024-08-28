@@ -9,12 +9,15 @@ import { FaHeart } from "react-icons/fa";
 import { HiMiniShoppingCart } from "react-icons/hi2";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { getFromLocalStorage } from "../../../Utili/LocalStorage";
 
 const Navbar = () => {
     const { user, logOut } = UseAuth();
     // console.log(user);
     const [theme, setTheme] = UseTheme();
     const [iteams, setItems] = useState([]);
+    const favListData = getFromLocalStorage('FavList');
+    // console.log(favListData.length);
 
     useEffect(() => {
         const getData = async () => {
@@ -22,7 +25,7 @@ const Navbar = () => {
             setItems(data)
         }
         getData();
-    }, []);
+    }, [user?.email]);
 
     const handleToggle = (e) => {
         if (e.target.checked) {
@@ -69,8 +72,9 @@ const Navbar = () => {
             </NavLink>
         </li>
         <li className="flex items-center">
-            <NavLink to={"/favList"}>
-                <FaHeart />
+            <NavLink className={"flex gap-2"}
+                to={"/favList"}>
+                <FaHeart /> <span className="-mt-3">{favListData.length}</span>
             </NavLink>
         </li>
 

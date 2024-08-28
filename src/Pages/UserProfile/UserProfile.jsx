@@ -8,7 +8,6 @@ const UserProfile = () => {
     const { user, updateUserProfile } = UseAuth();
     const [updateUserInfo, setUpdateUserInfo] = useState(user);
 
-    // console.log(user);
     useEffect(() => {
         if (user) {
             setUpdateUserInfo(user);
@@ -23,22 +22,29 @@ const UserProfile = () => {
 
     // console.log(phoneNumber);
 
-    const handleUpdate = (e) => {
+    const handleUpdate = async (e) => {
         e.preventDefault();
 
         const form = new FormData(e.currentTarget);
-
         const fname = form.get('fname');
         const lname = form.get('lname');
         const imageUrl = form.get('imageUrl');
         const phoneNumber = form.get('phoneNumber');
+        const address = form.get('address');
 
         const fullName = `${fname} ${lname}`;
 
-        console.log(fullName);
-
         // Reset error or success
         toast.dismiss();
+
+        const updatedInfo = {
+            fullName,
+            phoneNumber,
+            imageUrl,
+            address
+        }
+
+
 
         updateUserProfile(fullName, imageUrl, phoneNumber)
             .then(() => {
@@ -56,7 +62,6 @@ const UserProfile = () => {
 
     }
 
-    console.log(updateUserInfo, user);
     return (
         <>
             <Helmet >
@@ -77,9 +82,8 @@ const UserProfile = () => {
                     </div>
 
                     <div className='font-mono pt-5'>
-                        <p className='border-y-2 py-4 px-10  text-xl'>Pending Products:</p>
-                        <p className=' py-4 px-10  text-xl'>Rejected Products: </p>
-                        <p className='border-y-2 py-4 px-10  text-xl'>Confirm Products: </p>
+                        <p className='border-y-2 py-4 px-10  text-xl'>Address: {updateUserInfo.address}</p>
+                        <p className=' py-4 px-10  text-xl'>Phone: {updateUserInfo.phoneNumber}</p>
                     </div>
 
                 </div>

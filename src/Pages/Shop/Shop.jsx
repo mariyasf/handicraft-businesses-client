@@ -16,12 +16,14 @@ const Shop = () => {
     }, []);
 
     return (
-        <div className='max-w-[1240px] mx-auto pt-20  px-5 lg:p-0'>
-            <h1 className="text-3xl py-20">List Products</h1>
+        <div className='max-w-[1240px] mx-auto  px-5 lg:p-0'>
+            <h1 className="text-3xl pt-40 pb-10">List Products</h1>
             <div className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-5">
-                {products.map(prod => (
-                    <ProductsShopCart key={prod._id} data={prod} />
-                ))}
+                {
+                    products.map(prod => (
+                        <ProductsShopCart key={prod._id} data={prod} />
+                    ))
+                }
             </div>
         </div>
     );

@@ -13,7 +13,6 @@ const ProductsDetails = () => {
 
     const data = useLoaderData();
     const [quantity, setQuantity] = useState(1);
-    // const dispatch = useDispatch();
 
     const {
         _id,
@@ -47,8 +46,6 @@ const ProductsDetails = () => {
 
         };
 
-        // console.log(cartItem);
-        // console.log(typeof (_id), typeof (cartItem.productId));
 
         try {
             const { data } = await axiosSecure.post(
@@ -73,6 +70,7 @@ const ProductsDetails = () => {
         catch (error) {
             console.log(error);
         }
+
 
     }
 

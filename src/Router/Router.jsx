@@ -11,6 +11,7 @@ import Home from "../Pages/Home/Home";
 import Shop from "../Pages/Shop/Shop";
 import ProductsDetails from "../Pages/Shop/ProductsDetails";
 import OrderList from "../Pages/OrderList/OrderList";
+import FavList from "../Pages/FavList/FavList";
 
 const router = createBrowserRouter([
     {
@@ -44,6 +45,10 @@ const router = createBrowserRouter([
             {
                 path: '/myOrder',
                 element: <PrivateRoute><OrderList /></PrivateRoute>
+            },
+            {
+                path: '/favList',
+                element: <PrivateRoute><FavList /></PrivateRoute>
             },
 
         ]
