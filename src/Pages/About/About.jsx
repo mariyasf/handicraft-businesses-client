@@ -1,13 +1,14 @@
 // AboutUs.js
 import React from "react"
+import { Link } from "react-router-dom";
 
 
 const About = () => {
   return (
-    < div className="min-h-screen py-20 px-4 lg:px-8 w-full lg:max-w-7xl mx-auto">
+    < div className="max-w-[1240px] mx-auto pt-40 px-5 lg:px-0 pb-10">
       {/* Header Section */}
       <div className="text-center mb-12">
-        <h1 className="text-4xl lg:text-5xl font-bold text-white mb-4 font-Rancho">About <span className="text-orange-500">US</span></h1>
+        <h1 className="text-4xl lg:text-5xl font-bold  mb-4 font-Rancho">About <span className="text-orange-500">US</span></h1>
         <p className="text-lg lg:text-xl text-yellow-600">
           <b>Experience the Rich Heritage of Bangladesh through Our Handcrafted Artistry</b>
         </p>
@@ -15,11 +16,11 @@ const About = () => {
 
       {/* Introduction Section */}
       <section className="space-y-8 mb-20">
-      <div className="flex justify-center mt-8">
+        <div className="flex justify-center mt-8">
           <img
             src="https://banglacraft.org/wp-content/uploads/2023/01/May.jpg"
             alt="Jute Handicrafts"
-            className="w-full lg:w-2/3 rounded-lg shadow-lg"
+            className="w-full rounded-lg shadow-lg"
           />
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -36,7 +37,7 @@ const About = () => {
             </p>
           </div>
         </div>
-        
+
       </section>
 
       <section className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center space-y-8 lg:space-y-0 mb-20">
@@ -63,12 +64,12 @@ const About = () => {
           </p>
         </div>
         <div>
-        <div className="flex flex-col justify-center bg-gray-900 border border-gray-200 rounded-lg p-6">
-          <h2 className="font-Rancho text-3xl font-bold text-[var(--primary-color-2)] mb-4">Supporting Local Communities</h2>
-          <p className="text-white">
-            Our commitment goes beyond products. We aim to empower local jute farmers and artisans by providing fair wages and a global platform for their crafts. Your support helps sustain their livelihoods and preserves our cultural heritage.
-          </p>
-        </div>
+          <div className="flex flex-col justify-center bg-gray-900 border border-gray-200 rounded-lg p-6">
+            <h2 className="font-Rancho text-3xl font-bold text-[var(--primary-color-2)] mb-4">Supporting Local Communities</h2>
+            <p className="text-white">
+              Our commitment goes beyond products. We aim to empower local jute farmers and artisans by providing fair wages and a global platform for their crafts. Your support helps sustain their livelihoods and preserves our cultural heritage.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -83,7 +84,7 @@ const About = () => {
             <p>
               By choosing our products, you are not only getting high-quality, handcrafted items but also contributing to a larger cause. Your support helps us keep the rich heritage of Bangladeshi handicrafts alive and thriving.
             </p>
-            </div>
+          </div>
 
           <div>
             <img
@@ -92,27 +93,29 @@ const About = () => {
               className="w-full h-full object-cover"
             />
           </div>
-            </div>
-            </section>
+        </div>
+      </section>
 
-            <section className="text-center mt-16">
+      <section className="text-center mt-16">
         <h2 className="font-Rancho text-2xl lg:text-3xl font-bold text-orange-500 mb-4"><span className="text-white">Celebrate</span> Bangladeshi Artistry with Us</h2>
         <p className="text-[var(--accent-color-1)] mb-8">
           Explore our collection and support our mission to promote the beautiful craftsmanship of Bangladesh.
-          <span className="text-white"> ENJOY SHOPPING WITH US!</span> 
+          <span className="text-white"> ENJOY SHOPPING WITH US!</span>
         </p>
-        <button className="bg-[var(--primary-color-2)] text-[var(--base-color-1)] px-6 py-3 rounded-lg hover:bg-[var(--primary-color-1)] transition">
-          LET'S BUY!
-        </button>
-        
+        <Link to={'/shop'}>
+          <button className="bg-[var(--primary-color-2)] text-[var(--base-color-1)] px-6 py-3 rounded-lg hover:bg-[var(--primary-color-1)] transition">
+            LET'S BUY!
+          </button>
+        </Link>
+
       </section>
 
 
-            
 
-      
 
-      
+
+
+
     </div>
   );
 };
