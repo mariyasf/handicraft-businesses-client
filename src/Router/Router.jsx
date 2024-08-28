@@ -3,16 +3,19 @@ import {
 } from "react-router-dom";
 import ErrorPage from "../Pages/Error/ErrorPage";
 import Root from "../Layouts/Root";
+import App from "../App";
 import Register from "../Pages/Register/Register";
 import Login from "../Pages/Login/Login";
 import UserProfile from "../Pages/UserProfile/UserProfile";
 import PrivateRoute from "./PrivateRoute";
 import Home from "../Pages/Home/Home";
-import Shop from "../Pages/Shop/Shop";
-import ProductsDetails from "../Pages/Shop/ProductsDetails";
-import OrderList from "../Pages/OrderList/OrderList";
+<<<<<<< HEAD
 import FavList from "../Pages/FavList/FavList";
 
+=======
+import Shoplayout from '../Components/shoplayout';
+import Detail from "../Pages/Shop/Detail";
+>>>>>>> 0847710a700e2cfd3ac1b1082795264a05756125
 const router = createBrowserRouter([
     {
         path: "/",
@@ -22,7 +25,6 @@ const router = createBrowserRouter([
             {
                 path: "/",
                 element: <Home />,
-
             },
             {
                 path: "/profile",
@@ -31,26 +33,28 @@ const router = createBrowserRouter([
                 ,
             },
             {
-                path: "/shop",
+<<<<<<< HEAD
+                path: "/favList",
                 element:
-                    <Shop />
+                    <PrivateRoute><FavList /></PrivateRoute>
                 ,
             },
             {
-                path: `/products-details/:slug/:id`,
-                element: <ProductsDetails />,
-                loader: ({ params }) =>
-                    fetch(`${import.meta.env.VITE_API_URL}/shop/${params.id}`)
-            },
-            {
-                path: '/myOrder',
-                element: <PrivateRoute><OrderList /></PrivateRoute>
-            },
-            {
-                path: '/favList',
-                element: <PrivateRoute><FavList /></PrivateRoute>
-            },
+                path: "/shop",
 
+=======
+                path: "/Shop",
+                element:
+                   <Shoplayout />
+                ,
+            },
+            {
+                path: `/:slug`,
+                element:
+                   <Detail />
+                ,
+>>>>>>> 0847710a700e2cfd3ac1b1082795264a05756125
+            },
         ]
     },
     {
