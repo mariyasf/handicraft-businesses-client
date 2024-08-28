@@ -24,10 +24,10 @@ const Register = () => {
         const phoneNumber = form.get('phoneNumber');
         const password = form.get('password');
         const termsAC = e.target.terms.checked;
-        // console.log(name, photo, email, password);
+
 
         const fullName = `${fname} ${lname}`;
-        // console.log(fullName, phoneNumber, photo, email);
+
 
         // Reset error or success
         toast.dismiss();
@@ -52,9 +52,9 @@ const Register = () => {
 
         try {
             const result = createNewUser(email, password)
-            console.log('User: ', result);
+            // console.log('User: ', result);
 
-            // toast.success('Registration successful! You can now log in.');
+            toast.success('Registration successful!');
 
             updateUserProfile(fullName, photo, phoneNumber)
                 .then()
@@ -62,6 +62,8 @@ const Register = () => {
 
             const createdAt = result.user?.metadata?.creationTime;
             const user = { fullName, email, phoneNumber, createAt: createdAt };
+
+
 
             fetch(`${import.meta.env.VITE_API_URL}/users`, {
                 method: 'POST',
@@ -80,7 +82,8 @@ const Register = () => {
                 })
 
             e.target.reset();
-            navigate('/login')
+
+            navigate('/profile')
 
         }
 

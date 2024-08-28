@@ -49,7 +49,7 @@ const TodayDeals = () => {
 
                         </div>
                         <p className='lg:pt-5 text-gray-500'>Decorative jute candle holder that adds a cozy ambiance to any room.</p>
-                        <Link to={""}>
+                        <Link to={"/shop"}>
                             <button className=' gap-2 flex items-center  rounded-lg   hover:text-[#421b01] font-bold'>Shop Now <FaLongArrowAltRight /> </button>
                         </Link>
                     </div>
@@ -77,7 +77,7 @@ const TodayDeals = () => {
 
                         </div>
                         <p className='lg:pt-5 text-gray-500'>Compact and stylish jute pencil case for students and professionals.</p>
-                        <Link to={""}>
+                        <Link to={"/shop"}>
                             <button className=' gap-2 flex items-center  rounded-lg   hover:text-[#421b01] font-bold'>Shop Now <FaLongArrowAltRight /> </button>
                         </Link>
                     </div>
@@ -106,7 +106,7 @@ const TodayDeals = () => {
 
                         </div>
                         <p className='lg:pt-5 text-gray-500'>Eco-friendly jute phone case that provides protection and style.</p>
-                        <Link to={""}>
+                        <Link to={"/shop"}>
                             <button className=' gap-2 flex items-center  rounded-lg   hover:text-[#421b01] font-bold'>Shop Now <FaLongArrowAltRight /> </button>
                         </Link>
                     </div>
@@ -135,7 +135,7 @@ const TodayDeals = () => {
 
                         </div>
                         <p className='lg:pt-5 text-gray-500'>Versatile jute storage basket ideal for organizing your home.</p>
-                        <Link to={""}>
+                        <Link to={"/shop"}>
                             <button className=' gap-2 flex items-center  rounded-lg   hover:text-[#421b01] font-bold'>Shop Now <FaLongArrowAltRight /> </button>
                         </Link>
                     </div>

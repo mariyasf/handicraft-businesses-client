@@ -17,21 +17,18 @@ const Login = () => {
         const form = e.target;
         const email = form.email.value;
         const password = form.password.value;
-        // console.log(email, password)
+
 
         try {
             const result = await signIn(email, password)
 
-            // console.log(result.user)
             const { data } = await axiosSecure.post(`/jwt`,
                 {
                     email: result?.user?.email
                 },
             )
-            // console.log(data)
-
             // NAvigate after login
-            navigate(location?.state ? location.state : '/')
+            navigate('/')
         }
         catch (error) {
             console.error(error);
@@ -39,11 +36,10 @@ const Login = () => {
     }
 
     const handleGoogleLogin = async () => {
-        // console.log("YES");
+
         try {
             const result = await handleGoogleSignIn()
 
-            // console.log(result.user)
             const { data } = await axiosSecure.post(`/jwt`,
                 {
                     email: result?.user?.email
@@ -62,7 +58,7 @@ const Login = () => {
     const handleGithub = () => {
         handleGithubSignIn()
             .then(result => {
-                console.log(result.user)
+                // console.log(result.user)
                 // NAvigate after login
                 navigate(location?.state ? location.state : '/')
             })
