@@ -8,11 +8,12 @@ import Login from "../Pages/Login/Login";
 import UserProfile from "../Pages/UserProfile/UserProfile";
 import PrivateRoute from "./PrivateRoute";
 import Home from "../Pages/Home/Home";
-import Shop from "../Pages/Shop/Shop";
-import ProductsDetails from "../Pages/Shop/ProductsDetails";
-import OrderList from "../Pages/OrderList/OrderList";
 import FavList from "../Pages/FavList/FavList";
 
+=======
+import Shoplayout from '../Components/shoplayout';
+import Detail from "../Pages/Shop/Detail";
+>>>>>>> 0847710a700e2cfd3ac1b1082795264a05756125
 const router = createBrowserRouter([
     {
         path: "/",
@@ -31,7 +32,7 @@ const router = createBrowserRouter([
                 ,
             },
             {
-                path: "/shop",
+                path: "/favList",
                 element:
                     <Shop />
                 ,
@@ -47,8 +48,8 @@ const router = createBrowserRouter([
                 element: <PrivateRoute><OrderList /></PrivateRoute>
             },
             {
-                path: '/favList',
-                element: <PrivateRoute><FavList /></PrivateRoute>
+                path: "/shop",
+                
             },
 
         ]
@@ -57,7 +58,6 @@ const router = createBrowserRouter([
         path: "/login",
         element: <Login />,
     },
-
     {
         path: "/register",
         element: <Register />,
