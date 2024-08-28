@@ -27,6 +27,7 @@ const Login = () => {
                     email: result?.user?.email
                 },
             )
+            console.log("Login");
             // NAvigate after login
             navigate('/')
         }

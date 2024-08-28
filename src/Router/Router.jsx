@@ -9,11 +9,14 @@ import UserProfile from "../Pages/UserProfile/UserProfile";
 import PrivateRoute from "./PrivateRoute";
 import Home from "../Pages/Home/Home";
 import FavList from "../Pages/FavList/FavList";
+import Shop from "../Pages/Shop/Shop";
+import ProductsDetails from "../Pages/Shop/ProductsDetails";
+import OrderList from "../Pages/OrderList/OrderList";
 
-=======
-import Shoplayout from '../Components/shoplayout';
-import Detail from "../Pages/Shop/Detail";
->>>>>>> 0847710a700e2cfd3ac1b1082795264a05756125
+// =======
+// import Shoplayout from '../Components/shoplayout';
+// import Detail from "../Pages/Shop/Detail";
+// >>>>>>> 0847710a700e2cfd3ac1b1082795264a05756125
 const router = createBrowserRouter([
     {
         path: "/",
@@ -34,7 +37,7 @@ const router = createBrowserRouter([
             {
                 path: "/favList",
                 element:
-                    <Shop />
+                    <PrivateRoute> <FavList /></PrivateRoute>
                 ,
             },
             {
@@ -49,7 +52,8 @@ const router = createBrowserRouter([
             },
             {
                 path: "/shop",
-                
+                element: <Shop />
+
             },
 
         ]
